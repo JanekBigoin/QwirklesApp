@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Name"
+        android:textSize="18sp" />
+
+    <!-- Score avec le texte "Score" -->
+    <TextView
+        android:id="@+id/playerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Layout pour l'historique des scores -->
+    <LinearLayout
+        android:id="@+id/scoreHistoryLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+    </LinearLayout>
+
+    <!-- Boutons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1" />
+
+
+        <Button
+            android:id="@+id/btnAdd5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+5" />
+
+        <Button
+            android:id="@+id/btnAdd12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+12" />
+        <Button
+            android:id="@+id/btnSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-1"
+            />
+
+        <Button
+            android:id="@+id/btnSubtract5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-5" />
+
+        <Button
+            android:id="@+id/btnSubtract12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-12" />
+    </GridLayout>
+</LinearLayout>
