@@ -75,7 +75,6 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
             player.getScoreHistory().add("-5");
             notifyDataSetChanged();
         });
-
         // Enlever -12 du score
         holder.btnSubtract12.setOnClickListener(v -> {
             player.addScore(-12);
