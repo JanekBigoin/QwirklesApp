@@ -38,8 +38,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.constraintlayout.core)
+    implementation(libs.constraintlayout.solver)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation ("androidx.recyclerview:recyclerview:1.3.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.0")
 }

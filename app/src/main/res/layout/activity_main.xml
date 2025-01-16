@@ -1,58 +1,60 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fontFamily="@font/pacifico_regular"
-    android:padding="8dp"
-    android:gravity="center">
+    android:fillViewport="true"
+    android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/qwirkle_logo"
-    android:layout_marginBottom="32dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp">
 
-<TextView
-android:id="@+id/choosePlayerCountText"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="Choisir le nombre de joueurs"
-android:textSize="24sp"
-android:textColor="#000000"
-android:gravity="center"
-android:fontFamily="@font/pacifico_regular"
-android:layout_marginBottom="16dp"/>
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="250dp"
+            android:layout_height="131dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/qwirkle_logo" />
 
-    <!-- Spinner avec fond géométrique -->
-<Spinner
-android:id="@+id/playerCountSpinner"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:entries="@array/player_count"
-    android:fontFamily="@font/pacifico_regular"
+        <!-- Choisir le nombre de joueurs -->
+        <TextView
+            android:id="@+id/choosePlayerCountText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choisir le nombre de joueurs"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
 
-    android:layout_marginBottom="32dp"/>
+        <!-- Spinner pour sélectionner le nombre de joueurs -->
+        <Spinner
+            android:id="@+id/playerCountSpinner"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
 
-    <!-- Layout dynamique pour les champs de saisie des joueurs -->
-<LinearLayout
-android:id="@+id/playersLayout"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="vertical"
-    android:fontFamily="@font/pacifico_regular"
+        <!-- Zone pour afficher les EditText des joueurs -->
+        <LinearLayout
+            android:id="@+id/playersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp" />
 
-    android:layout_marginTop="16dp"/>
-
-    <!-- Bouton "Suivant" -->
-<Button
-android:id="@+id/btn_next"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="Suivant"
-android:textColor="#ffffff"
-android:textSize="18sp"
-    android:fontFamily="@font/pacifico_regular"
-    android:layout_marginTop="32dp"/>
+        <!-- Bouton "Suivant" -->
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suivant"
+            android:textColor="@color/button_text_color"
+            android:textSize="16sp"
+            android:backgroundTint="@color/button_color"
+            android:layout_marginTop="32dp"
+            android:padding="12dp" />
 
     </LinearLayout>
+</ScrollView>

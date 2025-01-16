@@ -1,10 +1,12 @@
 package com.example.qwirkleapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,11 +48,22 @@ public class ScoreActivity extends AppCompatActivity {
         // Bouton de réinitialisation des scores
         Button btnReset = findViewById(R.id.btn_reset);
         btnReset.setOnClickListener(v -> {
-            for (Player player : players) {
-                player.setScore(0);  // Réinitialiser les scores
-            }
-            adapter.notifyDataSetChanged();  // Mettre à jour la RecyclerView
-            Toast.makeText(this, "Scores réinitialisés !", Toast.LENGTH_SHORT).show();
+            // Créer l'alerte pour confirmer la réinitialisation
+            new AlertDialog.Builder(ScoreActivity.this)
+                    .setTitle("Réinitialiser les scores")
+                    .setMessage("Êtes-vous sûr de vouloir réinitialiser les scores de tous les joueurs ?")
+                    .setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            for (Player player : players) {
+                                player.setScore(0);  // Réinitialiser les scores
+                            }
+                            adapter.notifyDataSetChanged();  // Mettre à jour la RecyclerView
+                            Toast.makeText(ScoreActivity.this, "Scores réinitialisés !", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .setNegativeButton("Non", null)  // Si l'utilisateur appuie sur "Non", rien ne se passe
+                    .show();
         });
     }
 }
