@@ -77,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Veuillez entrer un nom pour chaque joueur.", Toast.LENGTH_SHORT).show();
             }
         });
+
+        Button btnPhotoHistory = findViewById(R.id.btn_photo_history);
+        btnPhotoHistory.setText("Photos des parties précédentes");
+        btnPhotoHistory.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, PhotoHistoryActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void updatePlayerFields(int numPlayers) {
@@ -108,11 +115,10 @@ public class MainActivity extends AppCompatActivity {
             playerNameField.setOnEditorActionListener((v, actionId, event) -> {
                 if (actionId == EditorInfo.IME_ACTION_NEXT) {
                     if (currentIndex + 1 < playerNameFields.size()) {
-                        playerNameFields.get(currentIndex + 1).requestFocus(); // Passe au champ suivant
+                        playerNameFields.get(currentIndex + 1).requestFocus();
                     }
                     return true; // Bloque le comportement par défaut
-                } else if (currentIndex == playerNameFields.size() - 1) { // Dernier champ
-                    // Si c'est le dernier champ, passe à l'activité suivante en simulant un clic sur le bouton "Suivant"
+                } else if (currentIndex == playerNameFields.size() - 1) {
                     List<String> playerNames = new ArrayList<>();
                     boolean allNamesValid = true;
 

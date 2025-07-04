@@ -18,4 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Réinitialiser les scores" />
+
+    <Button
+        android:id="@+id/btn_take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prendre une photo de la partie"
+        android:layout_marginTop="12dp" />
 </LinearLayout>

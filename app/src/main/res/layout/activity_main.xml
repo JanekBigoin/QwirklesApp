@@ -11,7 +11,8 @@
         android:gravity="center"
         android:padding="16dp">
 
-        <!-- Logo -->
+        <!-- Logo & Choisir le nombre de joueurs -->
+
         <ImageView
             android:id="@+id/logoImageView"
             android:layout_width="250dp"
@@ -19,7 +20,6 @@
             android:layout_marginBottom="20dp"
             android:src="@drawable/qwirkle_logo" />
 
-        <!-- Choisir le nombre de joueurs -->
         <TextView
             android:id="@+id/choosePlayerCountText"
             android:layout_width="match_parent"
@@ -54,6 +54,17 @@
             android:textSize="16sp"
             android:backgroundTint="@color/button_color"
             android:layout_marginTop="32dp"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btn_photo_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historique des photos"
+            android:textColor="@color/button_text_color"
+            android:textSize="16sp"
+            android:backgroundTint="@color/button_color"
+            android:layout_marginTop="16dp"
             android:padding="12dp" />
 
     </LinearLayout>
