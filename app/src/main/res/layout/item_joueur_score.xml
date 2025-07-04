@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/textViewPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom du joueur"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/textViewLastPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+5"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewPlayerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Ligne des boutons positifs -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnPlus1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="+1"
+            android:textSize="20sp"
+            android:backgroundTint="@color/button_positive"
+            android:textColor="@color/button_text_color"
+            android:layout_marginEnd="8dp"
+            android:padding="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/rounded_button_green"/>
+
+        <Button
+            android:id="@+id/btnPlus5"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="+5"
+            android:textSize="20sp"
+            android:backgroundTint="@color/button_positive"
+            android:textColor="@color/button_text_color"
+            android:layout_marginEnd="8dp"
+            android:padding="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/rounded_button_green"/>
+
+        <Button
+            android:id="@+id/btnPlus12"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="+12"
+            android:textSize="20sp"
+            android:backgroundTint="@color/button_positive"
+            android:textColor="@color/button_text_color"
+            android:padding="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/rounded_button_green"/>
+    </LinearLayout>
+
+    <!-- Ligne des boutons négatifs -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnMinus1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="-1"
+            android:textSize="20sp"
+            android:backgroundTint="@color/button_negative"
+            android:textColor="@color/button_text_color"
+            android:layout_marginEnd="8dp"
+            android:padding="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/rounded_button_red"/>
+
+        <Button
+            android:id="@+id/btnMinus5"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="-5"
+            android:textSize="20sp"
+            android:backgroundTint="@color/button_negative"
+            android:textColor="@color/button_text_color"
+            android:layout_marginEnd="8dp"
+            android:padding="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/rounded_button_red"/>
+
+        <Button
+            android:id="@+id/btnMinus12"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="-12"
+            android:textSize="20sp"
+            android:backgroundTint="@color/button_negative"
+            android:textColor="@color/button_text_color"
+            android:padding="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/rounded_button_red"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSwipeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⟵ Glisse pour changer de joueur ⟶"
+        android:textSize="14sp"
+        android:textColor="?android:textColorSecondary"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout> 

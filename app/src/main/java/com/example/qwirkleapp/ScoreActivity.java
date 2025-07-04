@@ -9,11 +9,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.qwirkleapp.Player;
-import com.example.qwirkleapp.PlayerAdapter;
+import com.example.qwirkleapp.ScorePagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +44,8 @@ public class ScoreActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int REQUEST_CAMERA_PERMISSION = 2;
     private String currentPhotoPath;
+    private ViewPager2 viewPager;
+    private ScorePagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +63,9 @@ public class ScoreActivity extends AppCompatActivity {
             players.add(new Player(name));
         }
 
-        RecyclerView recyclerView = findViewById(R.id.playersRecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        PlayerAdapter adapter = new PlayerAdapter(players);
-        recyclerView.setAdapter(adapter);
+        viewPager = findViewById(R.id.viewPagerPlayers);
+        pagerAdapter = new ScorePagerAdapter(players);
+        viewPager.setAdapter(pagerAdapter);
 
         Button btnReset = findViewById(R.id.btn_reset);
         btnReset.setOnClickListener(v -> {
@@ -79,7 +78,7 @@ public class ScoreActivity extends AppCompatActivity {
                             for (Player player : players) {
                                 player.setScore(0);
                             }
-                            adapter.notifyDataSetChanged();
+                            pagerAdapter.notifyDataSetChanged();
                             Toast.makeText(ScoreActivity.this, "Scores réinitialisés !", Toast.LENGTH_SHORT).show();
                         }
                     })
