@@ -40,7 +40,7 @@ public class ScorePagerAdapter extends RecyclerView.Adapter<ScorePagerAdapter.Sc
         View.OnClickListener showLastPoint = v -> {
             textViewLastPoint.setVisibility(View.VISIBLE);
             textViewLastPoint.setAlpha(1f);
-            textViewLastPoint.animate().alpha(0f).setDuration(1200).withEndAction(() -> textViewLastPoint.setVisibility(View.GONE)).start();
+            textViewLastPoint.animate().alpha(0f).setDuration(1200).withEndAction(() -> textViewLastPoint.setVisibility(View.INVISIBLE)).start();
         };
 
         btnPlus1.setOnClickListener(v -> {

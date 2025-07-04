@@ -24,7 +24,7 @@
         android:textSize="16sp"
         android:textStyle="italic"
         android:layout_marginBottom="4dp"
-        android:visibility="gone"/>
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/textViewPlayerScore"
@@ -51,12 +51,11 @@
             android:layout_height="56dp"
             android:text="+1"
             android:textSize="20sp"
-            android:backgroundTint="@color/button_positive"
-            android:textColor="@color/button_text_color"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
             android:layout_marginEnd="8dp"
             android:padding="0dp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/rounded_button_green"/>
+            android:fontFamily="sans-serif-medium"/>
 
         <Button
             android:id="@+id/btnPlus5"
@@ -64,12 +63,11 @@
             android:layout_height="56dp"
             android:text="+5"
             android:textSize="20sp"
-            android:backgroundTint="@color/button_positive"
-            android:textColor="@color/button_text_color"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
             android:layout_marginEnd="8dp"
             android:padding="0dp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/rounded_button_green"/>
+            android:fontFamily="sans-serif-medium"/>
 
         <Button
             android:id="@+id/btnPlus12"
@@ -77,11 +75,10 @@
             android:layout_height="56dp"
             android:text="+12"
             android:textSize="20sp"
-            android:backgroundTint="@color/button_positive"
-            android:textColor="@color/button_text_color"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
             android:padding="0dp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/rounded_button_green"/>
+            android:fontFamily="sans-serif-medium"/>
     </LinearLayout>
 
     <!-- Ligne des boutons négatifs -->
@@ -97,12 +94,11 @@
             android:layout_height="56dp"
             android:text="-1"
             android:textSize="20sp"
-            android:backgroundTint="@color/button_negative"
-            android:textColor="@color/button_text_color"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
             android:layout_marginEnd="8dp"
             android:padding="0dp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/rounded_button_red"/>
+            android:fontFamily="sans-serif-medium"/>
 
         <Button
             android:id="@+id/btnMinus5"
@@ -110,12 +106,11 @@
             android:layout_height="56dp"
             android:text="-5"
             android:textSize="20sp"
-            android:backgroundTint="@color/button_negative"
-            android:textColor="@color/button_text_color"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
             android:layout_marginEnd="8dp"
             android:padding="0dp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/rounded_button_red"/>
+            android:fontFamily="sans-serif-medium"/>
 
         <Button
             android:id="@+id/btnMinus12"
@@ -123,11 +118,10 @@
             android:layout_height="56dp"
             android:text="-12"
             android:textSize="20sp"
-            android:backgroundTint="@color/button_negative"
-            android:textColor="@color/button_text_color"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
             android:padding="0dp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/rounded_button_red"/>
+            android:fontFamily="sans-serif-medium"/>
     </LinearLayout>
 
     <TextView
