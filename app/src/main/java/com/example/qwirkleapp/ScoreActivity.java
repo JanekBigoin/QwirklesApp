@@ -66,6 +66,21 @@ public class ScoreActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPagerPlayers);
         pagerAdapter = new ScorePagerAdapter(players);
         viewPager.setAdapter(pagerAdapter);
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            private int previousPosition = -1;
+            @Override
+            public void onPageSelected(int position) {
+                int itemCount = pagerAdapter.getItemCount();
+                if (previousPosition == 0 && position == itemCount - 1) {
+                    // Swipe gauche depuis le premier vers le dernier
+                    viewPager.post(() -> viewPager.setCurrentItem(itemCount - 1, true));
+                } else if (previousPosition == itemCount - 1 && position == 0) {
+                    // Swipe droite depuis le dernier vers le premier
+                    viewPager.post(() -> viewPager.setCurrentItem(0, true));
+                }
+                previousPosition = position;
+            }
+        });
 
         Button btnReset = findViewById(R.id.btn_reset);
         btnReset.setOnClickListener(v -> {

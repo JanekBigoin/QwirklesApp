@@ -128,7 +128,7 @@
         android:id="@+id/textViewSwipeInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="⟵ Glisse pour changer de joueur ⟶"
+        android:text="← Changer de joueur →"
         android:textSize="14sp"
         android:textColor="?android:textColorSecondary"
         android:layout_marginTop="32dp"/>
